@@ -24,5 +24,13 @@ class ProductPage(BasePage):
         self.product_price_in_cart_same_as_on_product_page()
         self.product_name_on_capture_is_equal_for_real()
 
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.ADD_TO_CART_ALERT), \
+            'Success message is present, but should not be'
+
+    def should_disappeared(self):
+        assert self.is_not_element_present(*ProductPageLocators.ADD_TO_CART_ALERT), \
+            'Success message is present, but should not be'
+
 
 
