@@ -1,9 +1,12 @@
 from selenium.webdriver.common.by import By
 
 
-class MainPageLocators(object):
-    LOGIN_LINK = (By.CSS_SELECTOR, '#login_link')
+class BasePageLocators(object):
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     MAIN_PAGE_URL = "http://selenium1py.pythonanywhere.com "
+    BASKET_LINK = (By.PARTIAL_LINK_TEXT, 'basket')
+    BASKET_MESSAGE = (By.CSS_SELECTOR, '#content_inner p')
 
 
 class LoginPageLocators(object):
@@ -13,7 +16,8 @@ class LoginPageLocators(object):
 
 
 class ProductPageLocators(object):
-    PRODUCT_PAGE_URL = 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019'
+    PRODUCT_PAGE_URL = 'http://selenium1py.pythonanywhere.com' \
+                       '/catalogue/coders-at-work_207/?promo=newYear2019'
     ADD_TO_CART_BUTTON = (By.CSS_SELECTOR, 'button.btn-add-to-basket')
     ADD_TO_CART_ALERT = (By.CSS_SELECTOR, '.alertinner strong')
     PRODUCT_NAME = (By.CSS_SELECTOR, '.product_main h1')
@@ -30,7 +34,3 @@ class ProductPageLocators(object):
                  "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8",
                  "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"]
 
-
-class BasePageLocators(object):
-    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
-    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")

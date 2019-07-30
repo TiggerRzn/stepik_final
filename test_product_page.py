@@ -46,3 +46,8 @@ def test_guest_can_go_to_login_page_from_product_page(browser):
     page = ProductPage(browser, ProductPageLocators.PRODUCT_PAGE_URL)
     page.open()
     page.should_be_login_link()
+
+
+def test_guest_cant_see_product_in_cart_from_product_page(browser):
+    pass
+
