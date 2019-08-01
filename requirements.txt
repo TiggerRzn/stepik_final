@@ -1,3 +1,4 @@
+faker
 pytest==3.10.1
 pytest-rerunfailures==3.1
 selenium==3.13.0

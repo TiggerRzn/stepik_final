@@ -7,6 +7,14 @@ class BasePageLocators(object):
     MAIN_PAGE_URL = "http://selenium1py.pythonanywhere.com "
     BASKET_LINK = (By.PARTIAL_LINK_TEXT, 'basket')
     BASKET_MESSAGE = (By.CSS_SELECTOR, '#content_inner p')
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
+
+
+class RegisterPageLocators(object):
+    EMAIL_FIELD = (By.CSS_SELECTOR, 'input[name="registration-email"]')
+    PASSWORD_FIELD = (By.ID, 'id_registration-password1')
+    CONFIRM_PASSWORD_FIELD = (By.ID, 'id_registration-password2')
+    REGISTRATION_BUTTON = (By.CSS_SELECTOR, 'button[name="registration_submit"]')
 
 
 class LoginPageLocators(object):
