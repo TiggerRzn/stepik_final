@@ -6,10 +6,9 @@ from pages.login_page import *
 from pages.product_page import ProductPage
 
 
-@pytest.mark.parametrize('link', ProductPageLocators.PROMO_LINKS)
 @pytest.mark.need_review
-def test_guest_can_add_product_to_cart(browser, link):
-    product_page = ProductPage(browser, link)
+def test_guest_can_add_product_to_cart(browser):
+    product_page = ProductPage(browser, ProductPageLocators.PRODUCT_PAGE_URL)
     product_page.open()
     product_page.add_to_cart()
     product_page.add_to_cart_messages()
